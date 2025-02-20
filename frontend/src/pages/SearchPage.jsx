@@ -12,10 +12,6 @@ const SearchPage = () => {
   const [searchTerm,setSearchTerm] = useState("");
   const [results,setResults] = useState([]);
   const {setContentType} = useContentStore();
-
-  console.log("Results : ",results);
-  
-
   const handleSubmit = async(e)=>{
     setResults([]);
     e.preventDefault();

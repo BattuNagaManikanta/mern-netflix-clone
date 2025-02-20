@@ -15,14 +15,10 @@ import NotFoundPage from './pages/404'
 
 function App() {
   const {user,isCheckingAuth,authCheck} = useAuthUser();
-  console.log("auth user is here : ",user);
-  console.log(isCheckingAuth);
   
 
   useEffect(()=>{
     authCheck();
-    console.log("useEffect called");
-    
   },[]);
 
   if(isCheckingAuth){

@@ -39,8 +39,6 @@ const SearchHistoryPage = () => {
       toast.error("Failed to delete search item")
     }
   }
-  console.log(searchHistory.length);
-
   if (searchHistory?.length === 0) {
 		return (
 			<div className='bg-black min-h-screen text-white'>

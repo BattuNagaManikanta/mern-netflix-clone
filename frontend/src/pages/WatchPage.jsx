@@ -18,13 +18,6 @@ const WatchPage = () => {
   const [similarContent,setSimilarContent] = useState([]);
   const sliderRef = useRef();
   const {contentType} = useContentStore();
-
-  console.log(trailers);
-  console.log(content);
-  console.log(similarContent);
-  
-  
-
   useEffect(()=>{
     const getTrailers = async ()=>{
       try {
@@ -80,14 +73,12 @@ const WatchPage = () => {
 
   const slideLeft = ()=>{
     if(sliderRef.current){
-      console.log(sliderRef.current);
       sliderRef.current.scrollBy({left : -sliderRef.current.offsetWidth, behavior:"smooth"})
     }
   }
 
   const slideRight = ()=>{
     if(sliderRef.current){
-      console.log(sliderRef.current);
       sliderRef.current.scrollBy({left : sliderRef.current.offsetWidth, behavior:"smooth"})
     }
   }

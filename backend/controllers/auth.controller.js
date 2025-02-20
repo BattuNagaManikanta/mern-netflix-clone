@@ -120,7 +120,6 @@ export async function logout(req,res){
 
 
 export async function authCheck(req,res){
-  // console.log(req.user);
   try{
     res.status(200).json({
       success : true,user : req.user

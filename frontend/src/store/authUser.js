@@ -45,7 +45,6 @@ const useAuthUser = create((set)=>({
       const response = await axios.get("/api/v1/auth/authcheck");
       set({user : response.data.user,isCheckingAuth : false})
     } catch (error) {
-      console.log(error.response);
       set({isCheckingAuth : false , user : null})
     }
   }

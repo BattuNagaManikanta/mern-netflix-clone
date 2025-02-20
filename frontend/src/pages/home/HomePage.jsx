@@ -5,7 +5,6 @@ import useAuthUser from '../../store/authUser';
 
 const HomePage = () => {
   const {user} = useAuthUser();
-  console.log(user);
   
   return (
     <div>

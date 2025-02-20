@@ -102,7 +102,6 @@ export async function searchTv(req,res){
 }
 
 export async function getSearchHistory(req,res) {
-  console.log(req.user.searchHistory);
   try {
     res.status(200).json({
       success : true,

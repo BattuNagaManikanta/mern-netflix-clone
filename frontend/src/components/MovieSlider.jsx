@@ -12,8 +12,6 @@ const MovieSlider = ({category}) => {
   const [showArrows,setShowArrows] = useState(true);
   const sliderRef = useRef();
 
-
-  console.log(contentData);
   const formattedCategoryName = category[0].toUpperCase()+category.replaceAll("_"," ").slice(1);
   const formattedContentName = contentType == "movie" ? "Movies" : "TV Shows"
   useEffect(()=>{
@@ -31,14 +29,12 @@ const MovieSlider = ({category}) => {
 
   const slideLeft = ()=>{
     if(sliderRef.current){
-      console.log(sliderRef.current);
       sliderRef.current.scrollBy({left : -sliderRef.current.offsetWidth, behavior:"smooth"})
     }
   }
 
   const slideRight = ()=>{
     if(sliderRef.current){
-      console.log(sliderRef.current);
       sliderRef.current.scrollBy({left : sliderRef.current.offsetWidth, behavior:"smooth"})
     }
   }
