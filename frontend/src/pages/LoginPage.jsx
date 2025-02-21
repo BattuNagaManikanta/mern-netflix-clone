@@ -5,7 +5,7 @@ import useAuthUser from '../store/authUser';
 const LoginPage = () => {
   const [email , setEmail] = useState("");
   const [password,setPassword] = useState("");
-  const {login} = useAuthUser();
+  const {login,isLoggingIn} = useAuthUser();
 
   function handleSubmit(e){
     e.preventDefault();
@@ -52,7 +52,7 @@ const LoginPage = () => {
             </div>
 
             <button type='submit' className='text-white w-full bg-red-600 py-2 font-semibold rounded-md'>
-              Log In
+              {isLoggingIn ? "Loading...." : "Log In"}
             </button>
           </form>
           <div className='text-center text-gray-400'>

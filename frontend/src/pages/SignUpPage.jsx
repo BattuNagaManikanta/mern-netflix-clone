@@ -9,7 +9,7 @@ const SignUpPage = () => {
   const [username,setUsername] = useState("");
   const [password,setPassword] = useState("");
 
-  const {signup} = useAuthUser();
+  const {signup,isSigningUp} = useAuthUser();
 
   function handleSubmit(e){
     e.preventDefault();
@@ -67,8 +67,8 @@ const SignUpPage = () => {
               }}/>
             </div>
 
-            <button className='text-white w-full bg-red-600 py-2 font-semibold rounded-md'>
-              Sign Up
+            <button className='text-white w-full bg-red-600 py-2 font-semibold rounded-md' disabled = {isSigningUp}>
+              {isSigningUp ? "Loading.....":"Sign Up"}
             </button>
           </form>
           <div className='text-center text-gray-400'>
